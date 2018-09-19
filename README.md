@@ -11,9 +11,9 @@ command + ; 再次打开Project Structure
 
 选择生成方式和Manifest文件路径![选择生成方式和Manifest文件路径](https://github.com/LineChen/Jspatch2/raw/lyd/image/选择生成方式和Manifest文件路径.png)
 
-配置页面最重要![配置页面](https://github.com/LineChen/Jspatch2/raw/lyd/image/配置页面.png)
+配置界面最重要![配置界面](https://github.com/LineChen/Jspatch2/raw/lyd/image/配置界面.png)
 
-去除无用配置![去除无用配置](https://github.com/LineChen/Jspatch2/raw/lyd/image/去除无用配置.png)
+去除无用配置,并且把右上角的Other选择为Jar![去除无用配置](https://github.com/LineChen/Jspatch2/raw/lyd/image/去除无用配置.png)
 
 选择MANIFEST文件![选择MANIFEST文件](https://github.com/LineChen/Jspatch2/raw/lyd/image/选择MANIFEST文件.png)
 
