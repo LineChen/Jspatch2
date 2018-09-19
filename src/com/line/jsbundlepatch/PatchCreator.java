@@ -13,7 +13,7 @@ import com.line.jsbundlepatch.utils.PatchUtils;
 
 public class PatchCreator {
 	
-	private static final String TAG = "PatchCreator";
+	private static final String TAG = "[[PatchCreator]]";
 	
 	public static void createPatch(String buildRootDirPath) {
 		try{

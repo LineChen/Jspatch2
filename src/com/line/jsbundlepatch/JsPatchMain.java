@@ -18,7 +18,7 @@ import java.util.List;
 
 public class JsPatchMain {
 
-	private static final String TAG = "JsPatchMain";
+	private static final String TAG = "[[JsPatchMain]]";
 
 	private interface Function{
 		String CREATE_PATCH = "-p";
@@ -43,26 +43,26 @@ public class JsPatchMain {
 	public static final String JSPATCH_DIR = "jspatch";
 
 	public static void main(String[] args) {		
-//		String function = null;
-//		String buildRootDir = null;
-//		String env = null;
-//
-//		for(int i = 0; i < args.length; i++) {
-//			String arg = args[i];
-//			if(ENV.DEBUG.equals(arg) || ENV.PRE.equals(arg) || ENV.RELEASE.equals(arg)) {
-//				env = arg;
-//			} else if(Function.CREATE_JSON.equals(arg) || Function.CREATE_PATCH.equals(arg)) {
-//				function = arg;
-//			} else {
-//				buildRootDir = arg;
-//			}
-//		}
+		String function = null;
+		String buildRootDir = null;
+		String env = null;
+
+		for(int i = 0; i < args.length; i++) {
+			String arg = args[i];
+			if(ENV.DEBUG.equals(arg) || ENV.PRE.equals(arg) || ENV.RELEASE.equals(arg)) {
+				env = arg;
+			} else if(Function.CREATE_JSON.equals(arg) || Function.CREATE_PATCH.equals(arg)) {
+				function = arg;
+			} else {
+				buildRootDir = arg;
+			}
+		}
 		
 		//test
-		String function = "-p";
-//		String buildRootDir = "/Users/chenliu/workApp/RnAppTest/RnModule/build/";
-		String buildRootDir = "/Users/chenliu/workApp/android_v3/jsbundle-update/android/build/";
-		String env = ENV.PRE;
+//		String function = "-p";
+////		String buildRootDir = "/Users/chenliu/workApp/RnAppTest/RnModule/build/";
+//		String buildRootDir = "/Users/chenliu/workApp/android_v3/jsbundle-update/android/build/";
+//		String env = ENV.PRE;
 		
 		if(Function.CREATE_PATCH.equals(function)){
 			PatchCreator.createPatch(buildRootDir);
