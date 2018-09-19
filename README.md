@@ -1,3 +1,5 @@
+**IDEA 中打Jar包方式，包括输出Jar包依赖第三方Jar包方式**
+
 1.添加需要依赖的Jar包到库中![添加需要依赖的Jar包到库中](https://github.com/LineChen/Jspatch2/raw/lyd/image/addlibrary.png)
 
 2.command + ; 打开 Project Structure 或者点击File中也可以 选中module 在需要的jar包上打钩 添加依赖
