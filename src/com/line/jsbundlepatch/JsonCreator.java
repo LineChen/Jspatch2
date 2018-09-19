@@ -22,9 +22,9 @@ public class JsonCreator {
 	
 	private static String BUNDLE_PATCH_BUILD_FILE_NAME = "update.json";
 	
-	private static final String DOWNLOAD_BASE_URL_PRE = "http://pre.jiayouxueba.cn/static/jsbundle/android/";
+	private static final String DOWNLOAD_BASE_URL_PRE = "http://pre.xiaoqishen.cn/static/jsbundle/android/";
 	
-	private static final String DOWNLOAD_BASE_URL_RELEASE = "http://cdn.jiayouxueba.cn/static/jsbundle/android/";
+	private static final String DOWNLOAD_BASE_URL_RELEASE = "http://cdn.xiaoqishen.cn/static/jsbundle/android/";
 	
 	private static String DOWNLOAD_BASE_URL;
 	
