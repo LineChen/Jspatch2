@@ -11,6 +11,10 @@ public class Module {
      * 模块名称，eg:m1
      */
     private String moduleName;
+    /**
+     * 是否是全量设备 true 全量设备 false开发设备
+     */
+    private boolean allDevice;
 
     /**
      * 每个最小支持版本对应的最新bundle
@@ -45,4 +49,13 @@ public class Module {
     public void setJsBundlePatches(List<JsBundlePatch> jsBundlePatches) {
         this.jsBundlePatches = jsBundlePatches;
     }
+
+    public boolean isAllDevice() {
+        return allDevice;
+    }
+
+    public void setAllDevice(boolean allDevice) {
+        this.allDevice = allDevice;
+    }
+
 }

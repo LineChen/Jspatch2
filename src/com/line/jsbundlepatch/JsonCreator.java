@@ -31,7 +31,7 @@ public class JsonCreator {
 
     private static String DOWNLOAD_BASE_URL;
 
-    public static void createBuildJson(String env, String buildRootDirPath) {
+    public static void createBuildJson(String allDevices, String env, String buildRootDirPath) {
         if (ENV.PRE.equals(env)) {
             DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_PRE;
         } else if (ENV.RELEASE.equals(env)) {
@@ -49,12 +49,17 @@ public class JsonCreator {
                     if (!moduleDir.getName().equals(".DS_Store")) {
                         Log.log(TAG, "module name：" + moduleDir.getName());
                         Module module = new Module();
+                        if (JsPatchMain.DEVICETYPE.ALLDEVICE.equals(allDevices)) {
+                            module.setAllDevice(true);
+                        } else {
+                            module.setAllDevice(false);
+                        }
                         module.setModuleName(moduleDir.getName());
                         List<JsBundle> latestBundles = getModuleLatestBundles(moduleDir);
                         module.setLatestBundles(latestBundles);
-
                         List<JsBundlePatch> bundlePatchs = getModuleJsPatches(moduleDir);
                         module.setJsBundlePatches(bundlePatchs);
+
                         moduleList.add(module);
                     }
                 }
