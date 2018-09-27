@@ -136,8 +136,8 @@ public class JsonCreator {
     }
 
     private static String getFileShortPath(String absolutePath) {
-        int beginIndex = absolutePath.indexOf("course/android");
-        return absolutePath.substring(beginIndex + "course/android".length() + 1);
+        int beginIndex = absolutePath.indexOf("xqs-react-native-app/android");
+        return absolutePath.substring(beginIndex + "xqs-react-native-app/android".length() + 1);
     }
 
 }
