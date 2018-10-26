@@ -25,20 +25,22 @@ public class JsonCreator {
     //测试使用
     private static final String DOWNLOAD_BASE_URL_DEV = "http://127.0.0.1:8080/android/";
 
-    private static final String DOWNLOAD_BASE_URL_PRE = "http://pre.xiaoqishen.cn/static/jsbundle/android/";
+    private static final String DOWNLOAD_BASE_URL_PRE = "https://pre.xiaoqishen.cn/static/jsbundle/android/";
 
-    private static final String DOWNLOAD_BASE_URL_RELEASE = "http://cdn.xiaoqishen.cn/static/jsbundle/android/";
+    private static final String DOWNLOAD_BASE_URL_RELEASE = "https://cdn.xiaoqishen.cn/static/jsbundle/android/";
 
     private static String DOWNLOAD_BASE_URL;
 
-    public static void createBuildJson(String allDevices, String env, String buildRootDirPath) {
-        if (ENV.PRE.equals(env)) {
-            DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_PRE;
-        } else if (ENV.RELEASE.equals(env)) {
-            DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_RELEASE;
-        } else if (ENV.DEBUG.equals(env)) {
-            DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_DEV;
-        }
+    public static void createBuildJson(String allDevices, String url, String buildRootDirPath) {
+//        if (ENV.PRE.equals(env)) {
+//            DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_PRE;
+//        } else if (ENV.RELEASE.equals(env)) {
+//            DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_RELEASE;
+//        } else if (ENV.DEBUG.equals(env)) {
+//            DOWNLOAD_BASE_URL = DOWNLOAD_BASE_URL_DEV;
+//        }
+        DOWNLOAD_BASE_URL = url;
+
         try {
             List<Module> moduleList = new ArrayList<>();
             File buildRootDir = new File(buildRootDirPath);//module list
@@ -136,8 +138,8 @@ public class JsonCreator {
     }
 
     private static String getFileShortPath(String absolutePath) {
-        int beginIndex = absolutePath.indexOf("xqs-react-native-app/android");
-        return absolutePath.substring(beginIndex + "xqs-react-native-app/android".length() + 1);
+        int beginIndex = absolutePath.indexOf("android/build");
+        return absolutePath.substring(beginIndex + "android/build".length() + 1) + "build";
     }
 
 }
